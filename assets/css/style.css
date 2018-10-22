@@ -6,7 +6,7 @@
     color:burlywood;
     background: url('../images/hangman.png') no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center center; 
     }
 /* style the container */
     .container { 
@@ -20,11 +20,14 @@
         background-color: rgba(11, 12, 14, 0.6);
     }
     /* style the image sections */
-    #title-image, #gameover-image, #youwin-image{ 
+    #title-image{
+    max-height: 120px;
+    width: 30%;
+     }
+    #gameover-image, #youwin-image{ 
         display: block;
         margin: 0 auto;
-        max-height: 80px;
-        width: 25%;
+       
     }
 
 /* current word styling */
