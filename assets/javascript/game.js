@@ -12,8 +12,10 @@ var computerGuess;    //the computerguess and index of current word.
 var guessedLetters = [];
 var guessingWord = [];
 var remainingGusses = 0;
-
-
+// For Game sounds
+var keySound = new Audio('./assets/sounds/typewriter-key.wav');
+var winSound = new Audio('./assets/sounds/you-win.wav');
+var loseSound = new Audio('./assets/sounds/you-lose.wav');
 
 // Reset the game variabless
 function resetGame() {
@@ -91,6 +93,7 @@ function checkWin() {
         document.getElementById("youwin-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText = "display: block";
         wins++;
+        winSound.play();
         gamefinished = true;
     }
 }
@@ -99,6 +102,7 @@ function checkWin() {
 // Checks for a loss
 function checkLoss() {
     if (remainingGusses <= 0) {
+        loseSound.play();
         document.getElementById("gameover-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText = "display:block";
         Loss++;
@@ -127,6 +131,7 @@ document.onkeydown = function (event) {
     else {
         // a=65 & z=90{we want to make sure that a to z was pressed}
         if (event.keyCode >= 65 && event.keyCode <= 90) {
+            keySound.play();
             makeGuess(event.key.toLowerCase());
             updateDisplay();
             checkWin();
