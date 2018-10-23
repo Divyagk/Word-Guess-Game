@@ -1,5 +1,5 @@
 
-//'use strict';
+
 // Declaring computerchoices
 var computerChoices = ["italy", "france", "russia", "canada", "china", "india", "sudan", "brazil",];
 

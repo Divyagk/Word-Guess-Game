@@ -2,9 +2,9 @@
     body {
     background-color: #eee;
     padding-top: 20px;
-    font-family: sans-serif New, sans-serif, monospace;
+    font-family: 'Times New Roman', Times, serif;
     color:burlywood;
-    background: url('../images/hangman.png') no-repeat;
+    background: url('../images/hangman.png');
     background-size: cover;
     background-position: center center; 
     }
